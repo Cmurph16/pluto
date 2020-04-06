@@ -52,7 +52,7 @@ determine_additional_scans()
 	for port in $openPorts
 	do
 		echo 'found' $port
-		if [ $port -eq '80' ]
+		if [ $port -eq '80' ] || [ $port -eq '443' ]
 		then
 			http_enum
 		fi
